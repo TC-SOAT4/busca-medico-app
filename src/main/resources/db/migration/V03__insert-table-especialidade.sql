@@ -1,0 +1,10 @@
+INSERT INTO Especialidade (id, descricao) VALUES ('3cc27aaf-e826-4d78-ba86-93dc5fd79fdb', 'Pediatria');
+INSERT INTO Especialidade (id, descricao) VALUES ('06638631-94eb-4b46-84de-ecf0a783f95e', 'Cardiologia');
+INSERT INTO Especialidade (id, descricao) VALUES ('ef4dd878-86f5-47bc-922b-bad93616a932', 'Oftalmologia');
+INSERT INTO Especialidade (id, descricao) VALUES ('e7a7080c-5d86-410c-9166-8315513a2f3e', 'Dermatologia');
+INSERT INTO Especialidade (id, descricao) VALUES ('2850c0cc-f331-4f41-a265-7f6a81daa9f3', 'Geriatria');
+INSERT INTO Especialidade (id, descricao) VALUES ('22d40d3b-08bb-4e2e-aa46-c348c05be6b4', 'Infectologia');
+INSERT INTO Especialidade (id, descricao) VALUES ('78802830-c2d5-486e-9a86-37b530d02ee4', 'Urologia');
+INSERT INTO Especialidade (id, descricao) VALUES ('76470552-2fab-4bc3-aac9-7309dcdc2ec1', 'Ginecologia');
+INSERT INTO Especialidade (id, descricao) VALUES ('a3ad9825-aa5b-49e0-886d-1720460f1273', 'Psiquiatria');
+INSERT INTO Especialidade (id, descricao) VALUES ('5b222a77-a765-4197-9561-091583ed6ba8', 'Otorrinolaringologia');

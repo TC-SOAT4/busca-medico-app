@@ -1,0 +1,13 @@
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('75a1fe66-c4da-432b-80ef-509b2eef4ae7', 'Sheldon Cooper', '245618', '22d40d3b-08bb-4e2e-aa46-c348c05be6b4');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('8675bc70-cae5-49a0-bf31-65e5cdae3b15', 'Leonard Hofstadter', '589745', '5b222a77-a765-4197-9561-091583ed6ba8');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('59ba341f-50d0-4635-b11b-72bd9363019d', 'Penny Hofstadter', '697548', '76470552-2fab-4bc3-aac9-7309dcdc2ec1');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('1cdcf7a5-11b4-4d9e-b1f0-00f5fe3435b6', 'Howard Wolowitz', '452186', '3cc27aaf-e826-4d78-ba86-93dc5fd79fdb');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('ff309ee5-b9e1-449c-b6d6-ccdbbbb53e27', 'Bernadette Rostenkowski', '789458', '22d40d3b-08bb-4e2e-aa46-c348c05be6b4');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('81e4c60d-ed68-46f9-adc0-b6f72c549c6b', 'Raj Koothrappali', '237843', '78802830-c2d5-486e-9a86-37b530d02ee4');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('0376aeb2-1650-46b3-875b-e9a866394c86', 'Leslie Winkle', '123478', 'e7a7080c-5d86-410c-9166-8315513a2f3e');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('870d19e0-f20d-41c8-8591-1ea5d096567b', 'Amy Farrah Fowler', '965423', '2850c0cc-f331-4f41-a265-7f6a81daa9f3');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('de549640-806a-4dc8-ac1f-b99ea5c5a9ec', 'Stuart Bloom', '697542', '06638631-94eb-4b46-84de-ecf0a783f95e');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('363bd95f-6d4c-48d1-bd9e-052de6ad9929', 'Barry Kripke', '987023', '78802830-c2d5-486e-9a86-37b530d02ee4');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('001d5720-ab6c-4531-a985-df0c50b4fb02', 'Wil Wheaton', '657890', 'a3ad9825-aa5b-49e0-886d-1720460f1273');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('2e010b56-cd01-4b96-8027-4459873ae748', 'Bert Kibbler', '658742', '76470552-2fab-4bc3-aac9-7309dcdc2ec1');
+INSERT INTO Medico (id, nome, crm, especialidadeId) VALUES ('cee395cd-1581-496d-baa1-07f8661a12de', 'Beverly Hofstadter', '345789', '5b222a77-a765-4197-9561-091583ed6ba8');
