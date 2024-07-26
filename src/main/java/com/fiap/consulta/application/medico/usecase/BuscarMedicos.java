@@ -27,10 +27,10 @@ public class BuscarMedicos implements IBuscarMedicos {
         {
             throw new RuntimeException("É necessário informar ao menos um parâmetro para consulta.");
         }
-        //Realiza consulta por nome e CRM
+        // Realiza consulta por nome e CRM
         var medicos = medicoGateway.findAllByNomeOrCrm(nome, crm);
-        //Acrescenta resultados por especialidade
-        if(especialidade != null && !especialidade.isEmpty()) {
+        // Acrescenta resultados por especialidade
+        if (especialidade != null && !especialidade.isEmpty()) {
             var especialidades = especialidadeGateway.findByDescricao(especialidade);
             List<UUID> especialidadeIds = especialidades.stream()
                     .map(item -> (item.getId()))
