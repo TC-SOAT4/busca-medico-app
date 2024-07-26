@@ -24,7 +24,7 @@ spec:
             - name: SPRING_DATASOURCE_URL
               valueFrom:
                 configMapKeyRef:
-                  name: busca-medico
+                  name: configmap-busca-medico-app
                   key: SPRING_DATASOURCE_URL
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
@@ -39,12 +39,12 @@ spec:
             - name: SPRING_JPA_SHOW
               valueFrom:
                 configMapKeyRef:
-                  name: busca-medico
+                  name: configmap-busca-medico-app
                   key: SPRING_JPA_SHOW
             - name: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
               valueFrom:
                 configMapKeyRef:
-                  name: busca-medico
+                  name: configmap-busca-medico-app
                   key: SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
@@ -63,7 +63,7 @@ spec:
                   key: AWS_SESSION_TOKEN
           livenessProbe:
             httpGet:
-              path: /agenda-app/actuator/health
+              path: /busca-medico-app/actuator/health
               port: 8080
             initialDelaySeconds: 80
             periodSeconds: 3
