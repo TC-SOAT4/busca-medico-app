@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-busca-medico-app
+data:
+  SPRING_DATASOURCE_URL: jdbc:mariadb://rds-fiap-hackathon.cktpwpbhuxkf.us-east-1.rds.amazonaws.com:3306/medicodb
+  SPRING_JPA_SHOW: "true"
+  SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
