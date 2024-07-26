@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "aa3400e2-027d-4408-908f-f990f590c81c",
+		"name": "HACKATHON - busca-medico-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7429173"
+	},
+	"item": [
+		{
+			"name": "/medicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/busca-medico-app/api/medicos?nome=Hofstadter&crm=789458&especialidade=Cardiologista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"busca-medico-app",
+						"api",
+						"medicos"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Hofstadter"
+						},
+						{
+							"key": "crm",
+							"value": "789458"
+						},
+						{
+							"key": "especialidade",
+							"value": "Cardiologista"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

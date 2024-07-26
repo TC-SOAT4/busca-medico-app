@@ -17,7 +17,7 @@ public class BuscarMedicos implements IBuscarMedicos {
     @Autowired
     private IEspecialidadeGateway especialidadeGateway;
 
-    public List<Medico> ConsultaMedico(String especialidade, String nome, String crm)
+    public List<Medico> consultaMedico(String especialidade, String nome, String crm)
     {
         //Valida parâmetros de entrada
         if((especialidade == null || especialidade.isEmpty())
@@ -35,7 +35,7 @@ public class BuscarMedicos implements IBuscarMedicos {
             List<UUID> especialidadeIds = especialidades.stream()
                     .map(item -> (item.getId()))
                     .toList();
-            medicos.addAll(medicoGateway.FindAllByEspecialidadeIdIn(especialidadeIds));
+            medicos.addAll(medicoGateway.findAllByEspecialidadeIdIn(especialidadeIds));
         }
         return medicos;
     }

@@ -6,8 +6,8 @@ import java.util.UUID;
 
 public interface IMedicoGateway {
     List<Medico> findAllByNomeOrCrm(String nome, String crm);
-    List<Medico> FindByNome(String nome);
-    List<Medico> FindByCrm(String crm);
-    List<Medico> FindAllByEspecialidadeId(UUID especialidadeId);
-    List<Medico> FindAllByEspecialidadeIdIn(List<UUID> especialidadeIds);
+    List<Medico> findByNome(String nome);
+    List<Medico> findByCrm(String crm);
+    List<Medico> findAllByEspecialidadeId(UUID especialidadeId);
+    List<Medico> findAllByEspecialidadeIdIn(List<UUID> especialidadeIds);
 }

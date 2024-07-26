@@ -25,28 +25,28 @@ public class MedicoRepositoryGateway implements IMedicoGateway
     }
 
     @Override
-    public List<Medico> FindByNome(String nome)
+    public List<Medico> findByNome(String nome)
     {
         var medicoEntity = medicoRepository.findAllByNomeContaining(nome);
         return medicoMapper.toMedico(medicoEntity);
     }
 
     @Override
-    public List<Medico> FindByCrm(String crm)
+    public List<Medico> findByCrm(String crm)
     {
         var medicoEntity = medicoRepository.findAllByCrm(crm);
         return medicoMapper.toMedico(medicoEntity);
     }
 
     @Override
-    public List<Medico> FindAllByEspecialidadeId(UUID especialidadeId)
+    public List<Medico> findAllByEspecialidadeId(UUID especialidadeId)
     {
         var medicoEntity = medicoRepository.findAllByEspecialidadeId(especialidadeId);
         return medicoMapper.toMedico(medicoEntity);
     }
 
     @Override
-    public List<Medico> FindAllByEspecialidadeIdIn(List<UUID> especialidadeIds)
+    public List<Medico> findAllByEspecialidadeIdIn(List<UUID> especialidadeIds)
     {
         var medicoEntity = medicoRepository.findAllByEspecialidadeIdIn(especialidadeIds);
         return medicoMapper.toMedico(medicoEntity);
