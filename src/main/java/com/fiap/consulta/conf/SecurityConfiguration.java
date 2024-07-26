@@ -16,28 +16,25 @@ import lombok.RequiredArgsConstructor;
 @EnableWebSecurity
 @EnableMethodSecurity
 @RequiredArgsConstructor
-public class SecurityConfiguration
-{
-    //private final CustomJwtAuthenticationConverter authenticationConverter;
+public class SecurityConfiguration {
+
+    private final CustomJwtAuthenticationConverter authenticationConverter;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(Customizer.withDefaults())
-                .csrf(AbstractHttpConfigurer::disable)
-                .cors(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(authz -> authz.requestMatchers("/", "/swagger-ui/**", "/v3/api-docs/**", "/actuator/**")
-                        .permitAll()
-                        .anyRequest().permitAll()
-                        //authenticated()
+            .csrf(AbstractHttpConfigurer::disable)
+            .cors(AbstractHttpConfigurer::disable)
+            .authorizeHttpRequests(authz -> authz.requestMatchers("/", "/swagger-ui/**", "/v3/api-docs/**", "/actuator/**")
+                .permitAll()
+                .anyRequest().authenticated()
                 )
-                /*
                 .oauth2ResourceServer(oauth2 ->oauth2
-                        .jwt(jwt ->
-                                jwt.jwtAuthenticationConverter(authenticationConverter) // Necessary to convert AWS Cognito claim "cognito:groups" into ROLES
-                        )
+                .jwt(jwt -> 
+                            jwt.jwtAuthenticationConverter(authenticationConverter) // Necessary to convert AWS Cognito claim "cognito:groups" into ROLES
                 )
-                 */
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+        )
+        .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         return http.build();
     }
 

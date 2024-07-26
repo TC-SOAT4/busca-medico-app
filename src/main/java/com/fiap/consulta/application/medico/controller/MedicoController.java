@@ -1,25 +1,32 @@
 package com.fiap.consulta.application.medico.controller;
 
-import com.fiap.consulta.domain.medico.usecase.IBuscarMedicos;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
-import io.swagger.v3.oas.annotations.enums.ParameterStyle;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import java.util.UUID;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+import com.fiap.consulta.domain.medico.usecase.IBuscarMedicos;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.enums.ParameterStyle;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+
+
+@RequiredArgsConstructor
+@Tag(name = "Medicos")
 @RestController
 @RequestMapping("/api/medicos")
-@Tag(name = "Medicos")
 public class MedicoController {
-    @Autowired
-    private IBuscarMedicos buscarMedicoService;
 
-    //@PreAuthorize("hasRole('PACIENTE') or hasRole('MEDICO')")
+    private final IBuscarMedicos buscarMedicoService;
+
+    @PreAuthorize("hasRole('PACIENTE') or hasRole('MEDICO')")
     @GetMapping()
     @Operation(
             summary = "Busca por médico",
@@ -44,8 +51,7 @@ public class MedicoController {
         try {
             var response = buscarMedicoService.consultaMedico(especialidade, nome, crm);
             return new ResponseEntity<>(response, HttpStatus.OK);
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
