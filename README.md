@@ -7,7 +7,7 @@ Microsserviço desenvolvido para busca de médicos para o projeto **Health&Med**
 **Tecnologias**: 
  - Projeto em Java 17 
  - Spring-boot 3 Mariadb
- -  Path: /agenda-app
+ -  Path: /busca-medico-app
 -   Porta: 8080
  
 
